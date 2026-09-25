@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A65FAA9D03E998A896DB13C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF9929187BE088FFBE9DBD /* AppModel.swift */; };
+		1491A2F62F144F18272A1FA5 /* PhotoSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E9379E18D90163404922C /* PhotoSyncApp.swift */; };
+		41CE416BFCA10DC6ABB3E063 /* StatusFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF23DA078AECDC7621F36AC /* StatusFooter.swift */; };
+		59AB8F6D613367FB8A09E302 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5383CA2B0682DB135BA20F /* GalleryScreen.swift */; };
+		8C763AAC99F560B9EE397B8E /* PhotoSyncCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C5F6D408118945CBC9D4A81 /* PhotoSyncCore */; };
+		CA2242DADF054006AEEE6341 /* ThumbnailGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BDEB64B234B4FFD607BC0 /* ThumbnailGrid.swift */; };
+		D2CE9CF3DEDC157236689154 /* PreviewPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E555924264CE765B977EC50 /* PreviewPane.swift */; };
+		EB1664AA5647B90D51B27C78 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C44F8D7464B8D2B99DB5F /* SetupView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B42B37843B550B4F8AD9BA0 /* PhotoSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16AF9929187BE088FFBE9DBD /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		252C44F8D7464B8D2B99DB5F /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		3396519C9A9A5641F421A775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E229C0ADED2B8769ED8BBE3 /* PhotoSyncCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PhotoSyncCore; path = Packages/PhotoSyncCore; sourceTree = SOURCE_ROOT; };
+		5CF23DA078AECDC7621F36AC /* StatusFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFooter.swift; sourceTree = "<group>"; };
+		6C5383CA2B0682DB135BA20F /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
+		7E555924264CE765B977EC50 /* PreviewPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPane.swift; sourceTree = "<group>"; };
+		A53BDEB64B234B4FFD607BC0 /* ThumbnailGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGrid.swift; sourceTree = "<group>"; };
+		D6E3DE8F7BAE598C250A3FA3 /* PhotoSync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoSync.entitlements; sourceTree = "<group>"; };
+		FB0E9379E18D90163404922C /* PhotoSyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSyncApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		959D6911970AA02A80C03133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C763AAC99F560B9EE397B8E /* PhotoSyncCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C0AFCFD10FCC6DC08A73DF /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				252C44F8D7464B8D2B99DB5F /* SetupView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		267C840A980ADFB135EB7C1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC8893484CF776DDF18427 /* Gallery */,
+				02C0AFCFD10FCC6DC08A73DF /* Setup */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42F6A34331598E6B13230F87 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				16AF9929187BE088FFBE9DBD /* AppModel.swift */,
+				3396519C9A9A5641F421A775 /* Info.plist */,
+				D6E3DE8F7BAE598C250A3FA3 /* PhotoSync.entitlements */,
+				FB0E9379E18D90163404922C /* PhotoSyncApp.swift */,
+				267C840A980ADFB135EB7C1C /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4F398E2A4F38516C308CF068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B42B37843B550B4F8AD9BA0 /* PhotoSync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FBC8893484CF776DDF18427 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				6C5383CA2B0682DB135BA20F /* GalleryScreen.swift */,
+				7E555924264CE765B977EC50 /* PreviewPane.swift */,
+				5CF23DA078AECDC7621F36AC /* StatusFooter.swift */,
+				A53BDEB64B234B4FFD607BC0 /* ThumbnailGrid.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		9C0D7FD812A20B19613E8F7D = {
+			isa = PBXGroup;
+			children = (
+				42F6A34331598E6B13230F87 /* App */,
+				CC9210DAC8A689D8CDBB0FE5 /* Packages */,
+				4F398E2A4F38516C308CF068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9210DAC8A689D8CDBB0FE5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3E229C0ADED2B8769ED8BBE3 /* PhotoSyncCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01E356BF1943F400A824D5F1 /* PhotoSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA5E473B4B6F92A92911D848 /* Build configuration list for PBXNativeTarget "PhotoSync" */;
+			buildPhases = (
+				1036DB1B81204D66F4456DBB /* Sources */,
+				959D6911970AA02A80C03133 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoSync;
+			packageProductDependencies = (
+				8C5F6D408118945CBC9D4A81 /* PhotoSyncCore */,
+			);
+			productName = PhotoSync;
+			productReference = 0B42B37843B550B4F8AD9BA0 /* PhotoSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3ABC0C344E483C9D710724A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					01E356BF1943F400A824D5F1 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 0DA62C011EF95433049E529F /* Build configuration list for PBXProject "PhotoSync" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9C0D7FD812A20B19613E8F7D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				57F78F9AC6CC716811C9324C /* XCLocalSwiftPackageReference "Packages/PhotoSyncCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4F398E2A4F38516C308CF068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01E356BF1943F400A824D5F1 /* PhotoSync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1036DB1B81204D66F4456DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A65FAA9D03E998A896DB13C /* AppModel.swift in Sources */,
+				59AB8F6D613367FB8A09E302 /* GalleryScreen.swift in Sources */,
+				1491A2F62F144F18272A1FA5 /* PhotoSyncApp.swift in Sources */,
+				D2CE9CF3DEDC157236689154 /* PreviewPane.swift in Sources */,
+				EB1664AA5647B90D51B27C78 /* SetupView.swift in Sources */,
+				41CE416BFCA10DC6ABB3E063 /* StatusFooter.swift in Sources */,
+				CA2242DADF054006AEEE6341 /* ThumbnailGrid.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		097043037C6D99AB699E9A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1622D23741C117C1D4D36A1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B1F303EF7534DE2D0EB93CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/PhotoSync.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = club.rodent.photosync;
+				PRODUCT_NAME = PhotoSync;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E76AD20205CAC5BEF895D841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/PhotoSync.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = club.rodent.photosync;
+				PRODUCT_NAME = PhotoSync;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DA62C011EF95433049E529F /* Build configuration list for PBXProject "PhotoSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1622D23741C117C1D4D36A1B /* Debug */,
+				097043037C6D99AB699E9A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CA5E473B4B6F92A92911D848 /* Build configuration list for PBXNativeTarget "PhotoSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1F303EF7534DE2D0EB93CB7 /* Debug */,
+				E76AD20205CAC5BEF895D841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		57F78F9AC6CC716811C9324C /* XCLocalSwiftPackageReference "Packages/PhotoSyncCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/PhotoSyncCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C5F6D408118945CBC9D4A81 /* PhotoSyncCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PhotoSyncCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F3ABC0C344E483C9D710724A /* Project object */;
+}

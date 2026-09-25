@@ -1,0 +1,48 @@
+# Generate PhotoSync.xcodeproj with:  xcodegen generate
+name: PhotoSync
+options:
+  bundleIdPrefix: club.rodent
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+packages:
+  PhotoSyncCore:
+    path: Packages/PhotoSyncCore
+targets:
+  PhotoSync:
+    type: application
+    platform: macOS
+    sources:
+      - App
+    dependencies:
+      - package: PhotoSyncCore
+        product: PhotoSyncCore
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: PhotoSync
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSApplicationCategoryType: public.app-category.photography
+        NSPhotoLibraryUsageDescription: PhotoSync adds the photos you choose to your Photos library, and checks whether a photo is already there so it doesn't add it twice.
+        NSPhotoLibraryAddUsageDescription: PhotoSync adds the photos you choose to your Photos library.
+    entitlements:
+      path: App/PhotoSync.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.personal-information.photos-library: true
+        com.apple.security.files.user-selected.read-only: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: club.rodent.photosync
+        PRODUCT_NAME: PhotoSync
+        MARKETING_VERSION: "1.0"
+        SWIFT_VERSION: "5.0"
+        # Ad-hoc signing (no Apple ID signed in on this Mac yet). For stable
+        # Photos permission across rebuilds, switch to a Personal Team (plan flag 7).
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: ""
+        ENABLE_HARDENED_RUNTIME: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

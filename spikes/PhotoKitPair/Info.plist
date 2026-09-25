@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>CFBundleIdentifier</key><string>club.rodent.photosync.spike.photokitpair</string>
+  <key>CFBundleName</key><string>PhotoKitPair</string>
+  <key>CFBundleExecutable</key><string>PhotoKitPair</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>0.1</string>
+  <key>LSMinimumSystemVersion</key><string>15.0</string>
+  <key>NSPhotoLibraryUsageDescription</key><string>Test importing one photo into Photos (will be removed afterwards).</string>
+  <key>NSPhotoLibraryAddUsageDescription</key><string>Test importing one photo into Photos (will be removed afterwards).</string>
+</dict></plist>
