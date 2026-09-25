@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		0A65FAA9D03E998A896DB13C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF9929187BE088FFBE9DBD /* AppModel.swift */; };
 		1491A2F62F144F18272A1FA5 /* PhotoSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E9379E18D90163404922C /* PhotoSyncApp.swift */; };
+		25886585FC535C113325A09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4F3868FD50014BBEC552EF /* Assets.xcassets */; };
 		41CE416BFCA10DC6ABB3E063 /* StatusFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF23DA078AECDC7621F36AC /* StatusFooter.swift */; };
 		59AB8F6D613367FB8A09E302 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5383CA2B0682DB135BA20F /* GalleryScreen.swift */; };
 		8C763AAC99F560B9EE397B8E /* PhotoSyncCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C5F6D408118945CBC9D4A81 /* PhotoSyncCore */; };
+		9A1D20C1FF8CAB32316F086F /* PhotoSync.svg in Resources */ = {isa = PBXBuildFile; fileRef = 31C7F75ACBA6C65B817A28CE /* PhotoSync.svg */; };
 		CA2242DADF054006AEEE6341 /* ThumbnailGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BDEB64B234B4FFD607BC0 /* ThumbnailGrid.swift */; };
 		D2CE9CF3DEDC157236689154 /* PreviewPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E555924264CE765B977EC50 /* PreviewPane.swift */; };
 		EB1664AA5647B90D51B27C78 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C44F8D7464B8D2B99DB5F /* SetupView.swift */; };
@@ -21,9 +23,11 @@
 		0B42B37843B550B4F8AD9BA0 /* PhotoSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF9929187BE088FFBE9DBD /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		252C44F8D7464B8D2B99DB5F /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		31C7F75ACBA6C65B817A28CE /* PhotoSync.svg */ = {isa = PBXFileReference; path = PhotoSync.svg; sourceTree = "<group>"; };
 		3396519C9A9A5641F421A775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3E229C0ADED2B8769ED8BBE3 /* PhotoSyncCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PhotoSyncCore; path = Packages/PhotoSyncCore; sourceTree = SOURCE_ROOT; };
 		5CF23DA078AECDC7621F36AC /* StatusFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFooter.swift; sourceTree = "<group>"; };
+		5E4F3868FD50014BBEC552EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C5383CA2B0682DB135BA20F /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
 		7E555924264CE765B977EC50 /* PreviewPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPane.swift; sourceTree = "<group>"; };
 		A53BDEB64B234B4FFD607BC0 /* ThumbnailGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGrid.swift; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
+		256F5465330707038B80AD31 /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+				31C7F75ACBA6C65B817A28CE /* PhotoSync.svg */,
+			);
+			path = Branding;
+			sourceTree = "<group>";
+		};
 		267C840A980ADFB135EB7C1C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +76,11 @@
 			isa = PBXGroup;
 			children = (
 				16AF9929187BE088FFBE9DBD /* AppModel.swift */,
+				5E4F3868FD50014BBEC552EF /* Assets.xcassets */,
 				3396519C9A9A5641F421A775 /* Info.plist */,
 				D6E3DE8F7BAE598C250A3FA3 /* PhotoSync.entitlements */,
 				FB0E9379E18D90163404922C /* PhotoSyncApp.swift */,
+				256F5465330707038B80AD31 /* Branding */,
 				267C840A980ADFB135EB7C1C /* Views */,
 			);
 			path = App;
@@ -116,6 +130,7 @@
 			buildConfigurationList = CA5E473B4B6F92A92911D848 /* Build configuration list for PBXNativeTarget "PhotoSync" */;
 			buildPhases = (
 				1036DB1B81204D66F4456DBB /* Sources */,
+				76B6CE4691B995788E672FFC /* Resources */,
 				959D6911970AA02A80C03133 /* Frameworks */,
 			);
 			buildRules = (
@@ -166,6 +181,18 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76B6CE4691B995788E672FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25886585FC535C113325A09F /* Assets.xcassets in Resources */,
+				9A1D20C1FF8CAB32316F086F /* PhotoSync.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1036DB1B81204D66F4456DBB /* Sources */ = {
