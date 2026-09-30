@@ -30,10 +30,10 @@ struct PhotoSyncApp: App {
                 Button("Next Photo") { model.timeline.move(by: 1) }
                     .keyboardShortcut(.rightArrow, modifiers: [])
                     .disabled(!model.isReady)
-                Button("Photo Above") { model.timeline.move(by: -model.gridColumns) }
+                Button("Photo Above") { model.timeline.moveVertically(-1, columns: model.gridColumns) }
                     .keyboardShortcut(.upArrow, modifiers: [])
                     .disabled(!model.isReady)
-                Button("Photo Below") { model.timeline.move(by: model.gridColumns) }
+                Button("Photo Below") { model.timeline.moveVertically(1, columns: model.gridColumns) }
                     .keyboardShortcut(.downArrow, modifiers: [])
                     .disabled(!model.isReady)
                 Divider()

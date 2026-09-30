@@ -8,19 +8,31 @@ struct ThumbnailGrid: View {
 
     var body: some View {
         GeometryReader { geo in
-            let cols = max(1, Int((geo.size.width - 8) / 120))
-            let side = (geo.size.width - 8 - CGFloat(cols - 1) * Self.spacing) / CGFloat(cols)
+            // The scrollbar is always shown (see AlwaysVisibleScroller), so leave room for it.
+            let width = geo.size.width - 8 - AlwaysVisibleScroller.width
+            let cols = max(1, Int(width / 120))
+            let side = (width - CGFloat(cols - 1) * Self.spacing) / CGFloat(cols)
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: GridItem(.fixed(side), spacing: Self.spacing), count: cols),
-                              spacing: Self.spacing) {
-                        ForEach(model.timeline.entries) { entry in
-                            ThumbnailCell(entry: entry, side: side)
-                                .id(entry.id)
+                              spacing: Self.spacing,
+                              pinnedViews: [.sectionHeaders]) {
+                        ForEach(model.timeline.sections) { section in
+                            Section {
+                                ForEach(model.timeline.entries[section.range]) { entry in
+                                    ThumbnailCell(entry: entry, side: side)
+                                        .id(entry.id)
+                                }
+                            } header: {
+                                MonthHeader(section: section)
+                            }
                         }
                     }
-                    .padding(4)
+                    .padding(.horizontal, 4)
+                    .padding(.bottom, 4)
+                    .background(AlwaysVisibleScroller())
                 }
+                .scrollIndicators(.visible)
                 .onChange(of: model.timeline.selectedID) { _, id in
                     guard let id else { return }
                     withAnimation(.easeInOut(duration: 0.15)) { proxy.scrollTo(id, anchor: .center) }
@@ -42,6 +54,42 @@ struct ThumbnailGrid: View {
                     }
                 }
             }
+        }
+    }
+}
+
+/// Sticky "September, 2026" header; stays pinned while scrolling through that month.
+struct MonthHeader: View {
+    let section: MonthSection
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(section.title).font(.headline)
+            Spacer()
+            Text("\(section.range.count.formatted()) photos")
+                .font(.caption).foregroundStyle(.secondary)
+        }
+        .padding(.horizontal, 6)
+        .padding(.vertical, 7)
+        .frame(maxWidth: .infinity)
+        .background(.bar)
+    }
+}
+
+/// macOS hides overlay scrollbars until you scroll. Switch the grid's
+/// underlying NSScrollView to a permanently visible (legacy-style) scroller so
+/// the scrollbar always shows where you are in the timeline.
+struct AlwaysVisibleScroller: NSViewRepresentable {
+    static let width = NSScroller.scrollerWidth(for: .regular, scrollerStyle: .legacy)
+
+    func makeNSView(context: Context) -> NSView { NSView() }
+
+    func updateNSView(_ view: NSView, context: Context) {
+        DispatchQueue.main.async {
+            guard let scrollView = view.enclosingScrollView else { return }
+            scrollView.hasVerticalScroller = true
+            scrollView.autohidesScrollers = false
+            if scrollView.scrollerStyle != .legacy { scrollView.scrollerStyle = .legacy }
         }
     }
 }
