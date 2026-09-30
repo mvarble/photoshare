@@ -102,17 +102,23 @@ struct ThumbnailCell: View {
 
     var body: some View {
         let selected = model.timeline.selectedID == entry.id
-        ZStack(alignment: .bottomTrailing) {
-            Rectangle().fill(.quaternary)
-            if let image {
-                Image(nsImage: image).resizable().scaledToFill()
+        // The image is clipped inside a fixed square and the badge is laid over
+        // that square: aligning the badge to a fill-scaled image would place it
+        // outside the visible area.
+        Rectangle()
+            .fill(.quaternary)
+            .frame(width: side, height: side)
+            .overlay {
+                if let image {
+                    Image(nsImage: image).resizable().scaledToFill()
+                }
             }
-            StatusBadge(status: model.timeline.status(entry.id))
-                .padding(5)
-        }
-        .frame(width: side, height: side)
-        .clipped()
-        .overlay {
+            .clipped()
+            .overlay(alignment: .bottomTrailing) {
+                StatusBadge(status: model.timeline.status(entry.id))
+                    .padding(6)
+            }
+            .overlay {
             RoundedRectangle(cornerRadius: 3)
                 .strokeBorder(selected ? Color.accentColor : .clear, lineWidth: 3)
         }
@@ -159,7 +165,10 @@ struct StatusBadge: View {
         case .imported:
             Image(systemName: "checkmark.circle.fill")
                 .symbolRenderingMode(.palette).foregroundStyle(.white, .green)
-                .font(.title3).shadow(radius: 2)
+                .font(.title2)
+                .background(Circle().fill(.white).padding(1))
+                .shadow(color: .black.opacity(0.35), radius: 2, y: 1)
+                .help("In Photos")
         case .changedSinceImport:
             Image(systemName: "exclamationmark.circle.fill")
                 .symbolRenderingMode(.palette).foregroundStyle(.white, .orange)
